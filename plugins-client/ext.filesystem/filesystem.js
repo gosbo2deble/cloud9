@@ -454,6 +454,7 @@ module.exports = ext.register("ext/filesystem/filesystem", {
         this.webdav = apf.document.documentElement.appendChild(new apf.webdav({
             id  : "davProject",
             url : dav_url,
+            "extra-properties": true,
             onauthfailure: function() {
                 ide.dispatchEvent("authrequired");
             }
